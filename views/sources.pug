@@ -1,0 +1,15 @@
+extends layout
+
+block layout-content
+  div.View
+    div.Message
+      div.Title
+      table(style='width:100%', border='1')
+        tr
+            th Headline
+            th Source
+        each x in specificArticles
+            tr
+                td
+                    a(href=x.address) #{x.title}
+                td #{x.source}
